@@ -9,6 +9,8 @@ Tags: responsive wordpress, atechieintenerife, lifehacker
 */
 
 /*** GLOBAL : GENERAL STYLE DEFAULTS ***/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
+
 html
 {
 	margin: 0;
@@ -22,12 +24,13 @@ body
 body, input, textarea
 {
 	color: #222;    
-	font-family: Arial, sans-serif;
+	font-family: Roboto, sans-serif;
+    font-weight: 300;
 	line-height: 1.5;
 }
 h1, h2, h3, h4, h5, h6
 { 
-	font-weight: normal;
+	font-weight: 400;
 	clear: both;
 }
 hr
@@ -120,6 +123,17 @@ and (orientation : landscape) {
 
    div#content {
    }
+}
+
+@media only screen and (max-width:240px)
+{
+    body, input, textarea {}
+    h1, h2, h3, h4, h5, h6 {}
+    div#container {
+        border: solid 1px pink;
+        margin: 4px 4px;
+    }
+    div#content {}
 }
 
 
