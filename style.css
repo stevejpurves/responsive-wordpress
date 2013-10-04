@@ -198,11 +198,20 @@ and (orientation : landscape) {
 
     div#header {
         background-image: none;
+        height: auto;
+        box-shadow: none;
+    }
+
+    div#header_title {
+        font-size: 24pt;
+        text-align:center;
+        padding-top: 1em;
     }
 
    div#container, .menu {
-	border: solid 1px green;
-    margin: 0 4px 0 4px;
+        border: solid 1px green;
+        margin: 0 4px 0 4px;
+        top: 0;
    }
 
    div#content {
@@ -218,16 +227,22 @@ and (orientation : landscape) {
 
     div#header {
         background-image: none;
+        height: auto;
+        box-shadow: none;
     }
 
-    .menu {
-        margin: 0;
+    div#header_title {
+        font-size: 20pt;
+        text-align:center;
+        padding-top: 1em;
     }
 
     div#container, .menu {
         border: solid 1px pink;
         margin: 0 4px 0 4px;
+        top: 0;
     }
+
     div#content {
         margin: 0;
     }
