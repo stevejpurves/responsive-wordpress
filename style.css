@@ -75,23 +75,25 @@ a:visited
 
 div#header {
     background-color: lightgray;
-    height:200px;
+    background: url('img/teide_clouds_sanshoot_2444_1728.jpg') no-repeat left center fixed;
+    height:600px;
     width:100%
 }
 .menu {
     background-color: white;
     position:relative;
-    top:115px;
-    height:30px;
-    margin: 0 15% 0 15%;
+    height:50px;
+    margin: 0 10% 0 10%;
+    vertical-align: middle;
 }
 div#content {
     background-color: white;
-    margin: 0 15% 0 15%;
+    opacity: 0.85;
+    margin: 0 10% 0 10%;
     padding-left: 5px;
     padding-right: 5px;
     position: relative;
-    top: -60px;
+    top: -250px;
 }
 div#container
 {
@@ -106,7 +108,7 @@ div#content
 
 @media only screen
 and (min-device-width : 1025px) {
-    body { background-image: url('img/circuit-grey.jpg') }
+    body { background-image: url('img/circuit-grey.png') }
 }
 
 /* tablets (landscape) */
@@ -115,7 +117,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
     body, input, textarea {}
-    body { background-image: url('img/circuit-grey.jpg') }
+    body { background-image: url('img/circuit-grey.png') }
     h1, h2, h3, h4, h5, h6 {}
 
     div#container, .menu {
