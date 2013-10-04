@@ -33,7 +33,9 @@
 				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
 				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
             </div><!-- #access -->
- 			
+ 			<div id="header_title">
+ 			    <?php bloginfo( 'name' ); ?>
+ 			</div>
         </div><!-- #masthead -->
     </div><!-- #header -->
  

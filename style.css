@@ -10,6 +10,7 @@ Tags: responsive wordpress, atechieintenerife, lifehacker
 
 /*** GLOBAL : GENERAL STYLE DEFAULTS ***/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
+@import url(http://fonts.googleapis.com/css?family=Nova+Square);
 
 html
 {
@@ -67,48 +68,73 @@ a:visited
 	color: #8b46d1;
 }
 
+.menu a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #0a77e6;
+}
 
 
 /*** PAGE LAYOUT ***/
 
 /* Styles that affect the entire layout of the page */
 
-div#header {
-    background-color: lightgray;
-    background: url('img/teide_clouds_sanshoot_2444_1728.jpg') no-repeat left center fixed;
-    height:600px;
-    width:100%
-}
-.menu {
-    background-color: white;
-    position:relative;
-    height:50px;
-    margin: 0 10% 0 10%;
-    vertical-align: middle;
-}
-div#content {
-    background-color: white;
-    opacity: 0.85;
-    margin: 0 10% 0 10%;
-    padding-left: 5px;
-    padding-right: 5px;
-    position: relative;
-    top: -250px;
-}
-div#container
-{
-
-}
-
-div#content
-{
-	
-}
-
 
 @media only screen
 and (min-device-width : 1025px) {
     body { background-image: url('img/circuit-grey.png') }
+
+    div#header {
+        background: url('img/teide_clouds_sanshoot_2444_1728.jpg') no-repeat left -350px;
+        background-size: 150%;
+        height:400px;
+        width:100%;
+        box-shadow: 0 4px 4px grey;
+    }
+
+    .menu {
+        background-color: white;
+        position:relative;
+        padding-top: 0.5em;
+        height: 2em;
+        margin: 0 10% 0 10%;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .menu ul {
+        margin: 0;
+    }
+
+    div#header_title {
+        font-family: Nova Square, sans-serif;
+        font-size: 36pt;
+        margin: 0 10% 0 10%;
+        text-align:right;
+    }
+
+    div#container
+    {
+        background-color: white;
+        margin: 0 10% 0 10%;
+        padding-left: 5px;
+        padding-right: 5px;
+        position: relative;
+        top: -80px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    div#content
+    {
+
+    }
 }
 
 /* tablets (landscape) */
@@ -119,6 +145,10 @@ and (orientation : landscape) {
     body, input, textarea {}
     body { background-image: url('img/circuit-grey.png') }
     h1, h2, h3, h4, h5, h6 {}
+
+    div#header {
+        height:200px;
+    }
 
     div#container, .menu {
         border: solid 1px #ff1493;
@@ -132,23 +162,43 @@ and (orientation : landscape) {
 
 @media only screen and (max-width:768px)
 {
-   body, input, textarea {}
+   body {background-image: none;}
+   input, textarea {}
    h1, h2, h3, h4, h5, h6 {}
+
+    div#header {
+        background: url('img/teide_clouds_sanshoot_2444_1728.jpg') no-repeat left -350px;
+        height:400px;
+        width:100%;
+        box-shadow: 0 4px 4px grey;
+    }
 
    div#container, .menu {
 	border: solid 1px red;
    	margin: 0 10px 0 10px;
    }
 
-   div#content {
-       margin: 0;
-   }
+    div#container
+    {
+        background-color: white;
+        opacity: 0.85;
+        margin: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+        position: relative;
+        top: -50px;
+    }
 }
 
 @media only screen and (max-width:320px)
 {
-    body, input, textarea {}
+    body {background-image: none;}
+    input, textarea {}
     h1, h2, h3, h4, h5, h6 {}
+
+    div#header {
+        background-image: none;
+    }
 
    div#container, .menu {
 	border: solid 1px green;
@@ -162,8 +212,13 @@ and (orientation : landscape) {
 
 @media only screen and (max-width:240px)
 {
-    body, input, textarea {}
+    body {background-image: none;}
+    input, textarea {}
     h1, h2, h3, h4, h5, h6 {}
+
+    div#header {
+        background-image: none;
+    }
 
     .menu {
         margin: 0;
