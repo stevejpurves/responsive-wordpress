@@ -82,53 +82,64 @@ a:visited
     color: #0a77e6;
 }
 
+.menu {
+    float:right;
+    width:auto;
+    background-color: white;
+    position:relative;
+    padding-top: 1em;
+    height: 2em;
+    margin: 0;
+    border: solid 1px purple;
+}
+
+#access {
+    background-color: white;
+}
+
+div#header_title {
+    display: inline-block;
+    font-family: Nova Square, sans-serif;
+    margin: 0 10px 0 10px;
+    font-size: 28pt;
+}
+
+div#container
+{
+    background-color: white;
+}
+
+div#content {
+    margin: 0 5px 0 5px;
+}
 
 /*** PAGE LAYOUT ***/
 
-/* Styles that affect the entire layout of the page */
-
-
 @media only screen
-and (min-device-width : 1025px) {
+and (min-width : 1025px) {
     body { background-image: url('img/circuit-grey.png') }
 
-    div#header {
-        background: url('img/teide_clouds_sanshoot_2444_1728.jpg') no-repeat left -350px;
-        background-size: 150%;
-        height:400px;
+    div#header_img {
+        background-image: url('img/santa_cruz_flikr_antonio_tajuelo_2560.png'), url('img/santa_cruz_flikr_antonio_tajuelo_1024.png');
+        background-repeat: no-repeat, no-repeat;
+        background-position: right, right;
+        background-size: cover, cover;
+        height:446px;
         width:100%;
         box-shadow: 0 4px 4px grey;
     }
 
-    .menu {
-        background-color: white;
-        position:relative;
-        padding-top: 0.5em;
-        height: 2em;
-        margin: 0 10% 0 10%;
-        border-radius: 0 0 5px 5px;
-    }
-
-    .menu ul {
-        margin: 0;
-    }
-
-    div#header_title {
-        font-family: Nova Square, sans-serif;
+    span#header_title {
         font-size: 36pt;
-        margin: 0 10% 0 10%;
-        text-align:right;
     }
 
     div#container
     {
-        background-color: white;
-        margin: 0 10% 0 10%;
-        padding-left: 5px;
-        padding-right: 5px;
         position: relative;
         top: -80px;
+        margin: 0 10% 0 10%;
         border-radius: 5px 5px 0 0;
+        opacity: 0.9;
     }
 
     div#content
@@ -139,20 +150,32 @@ and (min-device-width : 1025px) {
 
 /* tablets (landscape) */
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
+and (min-width : 769px)
+and (max-width : 1024px)
 and (orientation : landscape) {
+
+}
+
+/* tablets (landscape) */
+@media only screen
+and (max-width : 1024px) {
     body, input, textarea {}
     body { background-image: url('img/circuit-grey.png') }
     h1, h2, h3, h4, h5, h6 {}
 
-    div#header {
-        height:200px;
+    div#header_img {
+        background-image: url('img/santa_cruz_flikr_antonio_tajuelo_1024.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: cover;
+        height:178px;
+        box-shadow: 0 4px 4px grey;
     }
 
-    div#container, .menu {
+    div#container {
         border: solid 1px #ff1493;
         margin: 4px 10px 4px 10px;
+        opacity: 0.9;
     }
 
     div#content {
@@ -162,33 +185,24 @@ and (orientation : landscape) {
 
 @media only screen and (max-width:768px)
 {
-   body {background-image: none;}
-   input, textarea {}
-   h1, h2, h3, h4, h5, h6 {}
+    body {background-image: none;}
+    input, textarea {}
+    h1, h2, h3, h4, h5, h6 {}
 
-    div#header {
-        background: url('img/teide_clouds_sanshoot_2444_1728.jpg') no-repeat left -350px;
-        height:400px;
-        width:100%;
-        box-shadow: 0 4px 4px grey;
+    div#header_img {
+        background-image: url('img/santa_cruz_flikr_antonio_tajuelo_768.png');
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:122px;
     }
 
-   div#container, .menu {
-	border: solid 1px red;
-   	margin: 0 10px 0 10px;
-   }
-
-    div#container
-    {
-        background-color: white;
-        opacity: 0.85;
+    div#container {
+        border: solid 1px red;
         margin: 0;
-        padding-left: 5px;
-        padding-right: 5px;
-        position: relative;
-        top: -50px;
     }
 }
+
 
 @media only screen and (max-width:320px)
 {
@@ -196,9 +210,9 @@ and (orientation : landscape) {
     input, textarea {}
     h1, h2, h3, h4, h5, h6 {}
 
-    div#header {
+    div#header_img {
         background-image: none;
-        height: auto;
+        height: 0;
         box-shadow: none;
     }
 
@@ -208,26 +222,27 @@ and (orientation : landscape) {
         padding-top: 1em;
     }
 
-   div#container, .menu {
+    div#container, .menu {
         border: solid 1px green;
         margin: 0 4px 0 4px;
         top: 0;
-   }
+    }
 
-   div#content {
-       margin: 0;
-   }
+    div#content {
+        margin: 0;
+    }
 }
 
+/* Styles that affect the entire layout of the page */
 @media only screen and (max-width:240px)
 {
     body {background-image: none;}
     input, textarea {}
     h1, h2, h3, h4, h5, h6 {}
 
-    div#header {
+    div#header_img {
         background-image: none;
-        height: auto;
+        height: 0;
         box-shadow: none;
     }
 
@@ -248,7 +263,6 @@ and (orientation : landscape) {
     }
 }
 
-
 /*** HEADER : MENU ***/
 
 /* To see a menu in your header, you'll need to first add one in WordPress Admin */
@@ -264,7 +278,7 @@ and (orientation : landscape) {
 .menu li
 {
     display: inline;
-    float: left;
+    float: right;
 	padding: 0 8px 0 4px;
 }
 .menu-item

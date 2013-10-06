@@ -32,10 +32,11 @@
 				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
 				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
 				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
+                <div id="header_title">
+                    <?php bloginfo( 'name' ); ?>
+                </div>
             </div><!-- #access -->
- 			<div id="header_title">
- 			    <?php bloginfo( 'name' ); ?>
- 			</div>
+            <div id="header_img"></div>
         </div><!-- #masthead -->
     </div><!-- #header -->
  
