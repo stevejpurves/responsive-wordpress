@@ -32,9 +32,9 @@
 				<!--<div class="skip-link"><a href="#content" title="<?php _e( 'Skip to content', 'hbd-theme' ) ?>"><?php _e( 'Skip to content', 'hbd-theme' ) ?></a></div>-->
 				<?php #wp_page_menu( 'sort_column=menu_order' ); ?>
 				<?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'container_class' => 'menu-header' ) ); ?>
-                <div id="header_title">
+                <a id="header_title" href="<?php bloginfo( 'url' ); ?>">
                     <?php bloginfo( 'name' ); ?>
-                </div>
+                </a>
             </div><!-- #access -->
             <div id="header_img"></div>
         </div><!-- #masthead -->
