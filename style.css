@@ -133,14 +133,18 @@ and (min-width : 1025px) {
         font-size: 36pt;
     }
 
-    .menu {
-        padding-right: 50px;
+    #access {
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    div#main {
+        position: relative;
+        top: -150px;
     }
 
     div#container
     {
-        position: relative;
-        top: -100px;
         margin: 0 5% 0 5%;
     }
 
@@ -174,9 +178,12 @@ and (max-width : 1024px) {
         box-shadow: 0 4px 4px grey;
     }
 
-    div#container {
+    div#main {
         position: relative;
-        top: -50px;
+        top: -75px;
+    }
+
+    div#container {
         margin: 0 20px 0 20px;
     }
 }
@@ -208,8 +215,12 @@ and (max-width : 1024px) {
         background-color: white;
     }
 
+    div#main {
+        position: relative;
+        top: 0px;
+    }
+
     div#container {
-        top: 0;
         margin: 0;
     }
 }
@@ -233,8 +244,11 @@ and (max-width : 1024px) {
         padding-top: 1em;
     }
 
-    div#container {
+    div#main {
         top: 0;
+    }
+
+    div#container {
         margin: 0;
     }
 }
@@ -258,8 +272,11 @@ and (max-width : 1024px) {
         padding-top: 1em;
     }
 
-    div#container {
+    div#main {
         top: 0;
+    }
+
+    div#container {
         margin: 0;
     }
 }
