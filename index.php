@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div id="container">
- 
+    <div id="image_credits">image courtesy of <a href="http://www.antoniotajuelo.com/" target="_blank">antonio tajuelo</a></div>
     <div id="content">
 		<?php /* Top post navigation */ ?>
 		<?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
