@@ -1,6 +1,7 @@
 <?php get_header(); ?>
  
         <div id="container">
+            <div id="image_credits">image courtesy of <a href="http://www.antoniotajuelo.com/" target="_blank">antonio tajuelo</a></div>
             <div id="content">
 
 				<?php the_post(); ?>
